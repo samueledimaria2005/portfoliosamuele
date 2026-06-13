@@ -1,226 +1,331 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuele Di Maria | Web Designer Genova & Liguria</title>
-    
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- AOS Library per animazioni -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuele Di Maria — Web Designer Genova & Liguria</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
-    <!-- Animazione di Caricamento -->
-<div id="loader" style="position:fixed; width:100%; height:100%; background:#0a0a0a; z-index:10000; display:flex; justify-content:center; align-items:center;">
-    <div style="width:40px; height:40px; border:3px solid #00d2ff; border-top:3px solid transparent; border-radius:50%; animation: spin 1s linear infinite;"></div>
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-bar"></div>
 </div>
 
-<style>
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-</style>
-    <!-- Cursore Personalizzato -->
-    <div class="cursor"></div>
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
 
-    <!-- Navigazione -->
-    <nav>
-        <div class="logo">SAMUELE <span class="highlight">DI MARIA</span></div>
-        <ul class="nav-links">
-            <li><a href="#servizi">Servizi</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#recensioni">Recensioni</a></li>
-            <li><a href="#preventivo">Preventivo</a></li>
-            <li><a href="https://wa.me/393393881640" class="btn-contact">Contattami</a></li>
-        </ul>
-    </nav>
+<!-- Nav -->
+<nav id="nav">
+  <a class="logo" href="#">S<span>D</span>M</a>
+  <ul class="nav-links">
+    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#portfolio">Lavori</a></li>
+    <li><a href="#preventivo" class="nav-cta">Preventivo Gratis</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content" data-aos="zoom-out-up">
-            <h1>Siti Web che portano <span class="highlight">Clienti</span>.</h1>
-            <p>Soluzioni digitali moderne per piccole imprese a Genova e in Liguria.</p>
-            <div class="hero-btns">
-                <a href="#portfolio" class="cta-sec">Vedi i lavori</a>
-                <a href="https://wa.me/393393881640?text=Ciao%20Samuele,%20ho%20visto%20il%20tuo%20sito%20e%20vorrei%20un%20preventivo." class="cta-main">
-                    <i class="fab fa-whatsapp"></i> Inizia ora
-                </a>
-            </div>
-        </div>
-    </section>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#portfolio">Lavori</a></li>
+    <li><a href="#recensioni">Recensioni</a></li>
+    <li><a href="#preventivo">Preventivo</a></li>
+    <li><a href="https://wa.me/393393881640" class="mobile-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+  </ul>
+</div>
 
-    <!-- Sezione Servizi -->
-    <section id="servizi" class="servizi">
-        <h2 data-aos="fade-right">Cosa faccio per la tua attività</h2>
-        <div class="servizi-grid">
-            <div class="servizio-item" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-utensils"></i>
-                <h3>Food & Drink</h3>
-                <p>Siti per Ristoranti e Trattorie con menù digitali pronti all'uso.</p>
-            </div>
-            <div class="servizio-item" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-umbrella-beach"></i>
-                <h3>Turismo</h3>
-                <p>Presenza online per Stabilimenti Balneari e attività della Riviera.</p>
-            </div>
-            <div class="servizio-item" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-tools"></i>
-                <h3>Pronto Intervento</h3>
-                <p>Siti ottimizzati per Elettricisti e Idraulici che vogliono ricevere chiamate.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sezione Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <h2 data-aos="fade-right">Portfolio Progetti 2026</h2>
-        <div class="grid">
-            <!-- Ristorante -->
-            <a href="https://samueledimaria2005.github.io/provaristorante2026/" target="_blank" class="project-card" data-aos="fade-up">
-                <div class="card-icon"><i class="fas fa-wine-glass"></i></div>
-                <h3>Ristorante Moderno</h3>
-                <p>Design minimalista per l'alta cucina.</p>
-            </a>
-            <!-- Bagni -->
-            <a href="https://samueledimaria2005.github.io/bagni-genova-2026/" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="card-icon"><i class="fas fa-sun"></i></div>
-                <h3>Bagni Genova</h3>
-                <p>Interfaccia fresca per stabilimenti balneari.</p>
-            </a>
-            <!-- Idraulico -->
-            <a href="https://samueledimaria2005.github.io/sito.idraulico.prova2026/" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-icon"><i class="fas fa-faucet"></i></div>
-                <h3>Servizi Idraulici</h3>
-                <p>Ottimizzato per conversioni rapide.</p>
-            </a>
-            <!-- Elettricista -->
-            <a href="https://samueledimaria2005.github.io/sitoelettricista2026prova/" target="_blank" class="project-card" data-aos="fade-up">
-                <div class="card-icon"><i class="fas fa-bolt"></i></div>
-                <h3>Pronto Intervento Elettrico</h3>
-                <p>Affidabilità e chiarezza per servizi tecnici.</p>
-            </a>
-            <!-- Salone -->
-            <a href="https://samueledimaria2005.github.io/salone-genova-prova2026/" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="card-icon"><i class="fas fa-cut"></i></div>
-                <h3>Hair Salon</h3>
-                <p>Eleganza visiva per il settore beauty.</p>
-            </a>
-            <!-- Trattoria -->
-            <a href="https://samueledimaria2005.github.io/provatrattoria2026/" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-icon"><i class="fas fa-pizza-slice"></i></div>
-                <h3>Trattoria Tipica</h3>
-                <p>Tradizione ligure in chiave digitale.</p>
-            </a>
-        </div>
-    </section>
-
-    <!-- Sezione Recensioni -->
-<section id="recensioni" class="reviews">
-    <h2 data-aos="fade-right">Cosa dicono i clienti</h2>
-    <div class="reviews-grid">
-        <!-- Recensione 1 -->
-        <div class="review-card" data-aos="fade-up">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Sito web perfetto per il mio ristorante a Genova. Samuele ha capito subito le mie esigenze. Professionale e veloce."</p>
-            <span class="client-name">- Marco R., Ristoratore</span>
-        </div>
-        <!-- Recensione 2 -->
-        <div class="review-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Grazie al nuovo sito ricevo molte più chiamate ogni giorno. Un investimento che si è ripagato subito."</p>
-            <span class="client-name">- Andrea T., Idraulica Z.</span>
-        </div>
-        <!-- Recensione 3 -->
-        <div class="review-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Ragazzo molto corretto e professionale, mi ritengo soddissfatto dal sito che mi è stato fornito"</p>
-            <span class="client-name">- Elena G., Hair Stylist</span>
-        </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text" aria-hidden="true">GENOVA</div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="dot"></span> Disponibile per nuovi progetti
     </div>
+    <h1 class="hero-title">
+      Siti web che<br><em>lavorano per te</em><br>anche di notte.
+    </h1>
+    <p class="hero-sub">Web designer freelance a Genova. Creo siti moderni per ristoranti, stabilimenti balneari e ogni piccola attività.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/393393881640?text=Ciao%20Samuele,%20ho%20visto%20il%20tuo%20sito%20e%20vorrei%20un%20preventivo." class="btn-primary" target="_blank">
+        <i class="fab fa-whatsapp"></i> Scrivimi su WhatsApp
+      </a>
+      <a href="#portfolio" class="btn-ghost">Vedi i lavori <i class="fas fa-arrow-down"></i></a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
 </section>
 
-    <!-- Sezione Questionario Preventivo -->
-    <section id="preventivo" class="preventivo">
-        <div class="form-container" data-aos="zoom-in">
-            <div class="form-header">
-                <h2>Configura il tuo progetto</h2>
-                <p>Rispondi a poche domande per ricevere un preventivo personalizzato entro 24h.</p>
-            </div>
+<!-- NUMERI -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num">6+</span>
+      <span class="stat-label">Siti realizzati nel 2026</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">24h</span>
+      <span class="stat-label">Risposta garantita</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Clienti soddisfatti</span>
+    </div>
+  </div>
+</section>
 
-            <!-- Sostituisci "iltuo-id-formspree" con il tuo ID dopo esserti registrato su Formspree.io -->
-            <form action="https://formspree.io/f/Samuele.dimaria2005@gmail.com" method="POST" id="quiz-form">
-                <div class="form-group">
-                    <label>Che tipo di attività hai?</label>
-                    <select name="settore" required>
-                        <option value="" disabled selected>Seleziona il tuo settore</option>
-                        <option value="ristorazione">Ristorante / Trattoria</option>
-                        <option value="balneare">Stabilimento Balneare</option>
-                        <option value="artigiano">Artigiano (Idraulico, Elettricista...)</option>
-                        <option value="beauty">Salone di Bellezza / Tatuatore</option>
-                        <option value="altro">Altro</option>
-                    </select>
-                </div>
+<!-- SERVIZI -->
+<section id="servizi" class="servizi">
+  <div class="section-header">
+    <p class="section-eyebrow">Cosa faccio</p>
+    <h2>Soluzioni su misura<br>per ogni attività.</h2>
+  </div>
+  <div class="servizi-grid">
+    <div class="servizio-card">
+      <div class="servizio-num">01</div>
+      <div class="servizio-icon"><i class="fas fa-utensils"></i></div>
+      <h3>Food &amp; Drink</h3>
+      <p>Siti per ristoranti e trattorie con menù digitali eleganti. Il tuo locale raccontato come merita.</p>
+    </div>
+    <div class="servizio-card">
+      <div class="servizio-num">02</div>
+      <div class="servizio-icon"><i class="fas fa-umbrella-beach"></i></div>
+      <h3>Turismo &amp; Riviera</h3>
+      <p>Presenza online per stabilimenti balneari e attività turistiche. Prenota clienti dalla spiaggia al sito.</p>
+    </div>
+    <div class="servizio-card">
+      <div class="servizio-num">03</div>
+      <div class="servizio-icon"><i class="fas fa-tools"></i></div>
+      <h3>Pronto Intervento</h3>
+      <p>Siti ottimizzati per elettricisti e idraulici. Più chiamate, meno concorrenza. Risultati in poche settimane.</p>
+    </div>
+  </div>
+</section>
 
-                <div class="form-group">
-                    <label>Qual è il tuo obiettivo principale?</label>
-                    <div class="options-grid">
-                        <label class="option-card">
-                            <input type="radio" name="obiettivo" value="nuovo-sito" required>
-                            <span>Crea da zero</span>
-                        </label>
-                        <label class="option-card">
-                            <input type="radio" name="obiettivo" value="restyling">
-                            <span>Rifacimento</span>
-                        </label>
-                        <label class="option-card">
-                            <input type="radio" name="obiettivo" value="clienti">
-                            <span>Trovare Clienti</span>
-                        </label>
-                    </div>
-                </div>
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+  <div class="section-header">
+    <p class="section-eyebrow">Portfolio 2026</p>
+    <h2>Lavori recenti.</h2>
+  </div>
+  <div class="portfolio-grid">
+    <a href="https://samueledimaria2005.github.io/provaristorante2026/" target="_blank" class="pcard">
+      <div class="pcard-meta">
+        <span class="pcard-tag">Ristorazione</span>
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </div>
+      <div class="pcard-icon"><i class="fas fa-wine-glass-alt"></i></div>
+      <h3>Ristorante Moderno</h3>
+      <p>Design minimalista per l'alta cucina genovese.</p>
+      <div class="pcard-bar"></div>
+    </a>
+    <a href="https://samueledimaria2005.github.io/bagni-genova-2026/" target="_blank" class="pcard">
+      <div class="pcard-meta">
+        <span class="pcard-tag">Turismo</span>
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </div>
+      <div class="pcard-icon"><i class="fas fa-sun"></i></div>
+      <h3>Bagni Genova</h3>
+      <p>Interfaccia fresca per stabilimenti balneari della Riviera.</p>
+      <div class="pcard-bar"></div>
+    </a>
+    <a href="https://samueledimaria2005.github.io/sito.idraulico.prova2026/" target="_blank" class="pcard">
+      <div class="pcard-meta">
+        <span class="pcard-tag">Artigiano</span>
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </div>
+      <div class="pcard-icon"><i class="fas fa-faucet"></i></div>
+      <h3>Servizi Idraulici</h3>
+      <p>Ottimizzato per conversioni rapide e chiamate dirette.</p>
+      <div class="pcard-bar"></div>
+    </a>
+    <a href="https://samueledimaria2005.github.io/sitoelettricista2026prova/" target="_blank" class="pcard">
+      <div class="pcard-meta">
+        <span class="pcard-tag">Artigiano</span>
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </div>
+      <div class="pcard-icon"><i class="fas fa-bolt"></i></div>
+      <h3>Pronto Intervento Elettrico</h3>
+      <p>Affidabilità e chiarezza per servizi tecnici urgenti.</p>
+      <div class="pcard-bar"></div>
+    </a>
+    <a href="https://samueledimaria2005.github.io/salone-genova-prova2026/" target="_blank" class="pcard">
+      <div class="pcard-meta">
+        <span class="pcard-tag">Beauty</span>
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </div>
+      <div class="pcard-icon"><i class="fas fa-cut"></i></div>
+      <h3>Hair Salon</h3>
+      <p>Eleganza visiva e prenotazioni online per il settore beauty.</p>
+      <div class="pcard-bar"></div>
+    </a>
+    <a href="https://samueledimaria2005.github.io/provatrattoria2026/" target="_blank" class="pcard">
+      <div class="pcard-meta">
+        <span class="pcard-tag">Ristorazione</span>
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </div>
+      <div class="pcard-icon"><i class="fas fa-pizza-slice"></i></div>
+      <h3>Trattoria Tipica</h3>
+      <p>Tradizione ligure raccontata in chiave digitale moderna.</p>
+      <div class="pcard-bar"></div>
+    </a>
+  </div>
+</section>
 
-                <div class="form-group">
-                    <label>Descrizione breve:</label>
-                    <textarea name="messaggio" placeholder="Esempio: Vorrei un sito per i miei bagni a Genova..." rows="3"></textarea>
-                </div>
-
-                <div class="form-row">
-                    <input type="text" name="nome" placeholder="Il tuo nome" required>
-                    <input type="email" name="email" placeholder="La tua email" required>
-                </div>
-                
-                <input type="tel" name="telefono" placeholder="WhatsApp (opzionale)">
-
-                <button type="submit" class="btn-submit">Invia Richiesta Gratis</button>
-            </form>
+<!-- PERCHÉ SCEGLIERMI -->
+<section class="perche">
+  <div class="perche-inner">
+    <div class="perche-left">
+      <p class="section-eyebrow">Perché scegliermi</p>
+      <h2>Un freelancer,<br>nessun intermediario.</h2>
+      <p class="perche-body">Parli direttamente con chi costruisce il tuo sito. Niente agenzie, niente costi gonfiati. Solo risultati concreti per la tua attività a Genova e in Liguria.</p>
+      <a href="https://wa.me/393393881640" class="btn-primary" target="_blank">
+        <i class="fab fa-whatsapp"></i> Parliamone
+      </a>
+    </div>
+    <div class="perche-right">
+      <div class="perche-item">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <strong>Consegna in 7–14 giorni</strong>
+          <p>Tempi certi, nessun ritardo. Il tuo sito online nel minor tempo possibile.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content" data-aos="fade-up">
-            <h3>Samuele Di Maria</h3>
-            <p>Web Designer Freelance | Genova & Liguria</p>
-            <div class="contact-links">
-                <a href="mailto:Samuele.dimaria2005@gmail.com"><i class="fas fa-envelope"></i> Samuele.dimaria2005@gmail.com</a>
-                <a href="tel:+393393881640"><i class="fas fa-phone"></i> 339 3881640</a>
-            </div>
-            <p class="copyright">&copy; 2026 Samuele Di Maria. Tutti i diritti riservati.</p>
-            <!-- SEO Locale Invisibile -->
-<p style="font-size: 0.7rem; color: #111; margin-top: 40px; text-align: center;">
-    Realizzazione siti web professionali a Genova, Chiavari, Savona e La Spezia. 
-    Specialista in SEO locale per ristorazione, stabilimenti balneari e servizi di pronto intervento in Liguria.
-</p>
+      </div>
+      <div class="perche-item">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <strong>Ottimizzato per Google</strong>
+          <p>SEO locale integrato per farti trovare dai clienti della tua zona.</p>
         </div>
-    </footer>
+      </div>
+      <div class="perche-item">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <strong>Design su misura</strong>
+          <p>Ogni sito è unico. Niente template, tutto costruito attorno alla tua attività.</p>
+        </div>
+      </div>
+      <div class="perche-item">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <strong>Supporto anche dopo</strong>
+          <p>Non sparisco dopo la consegna. Sono disponibile per aggiornamenti e modifiche.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="script.js"></script>
+<!-- PREVENTIVO FORM -->
+<section id="preventivo" class="preventivo">
+  <div class="preventivo-inner">
+    <div class="preventivo-left">
+      <p class="section-eyebrow">Preventivo gratuito</p>
+      <h2>Parlami del<br>tuo progetto.</h2>
+      <p>Rispondi a poche domande e ricevi un preventivo personalizzato entro 24 ore. Gratis, senza impegno.</p>
+      <div class="contact-direct">
+        <a href="mailto:Samuele.dimaria2005@gmail.com"><i class="fas fa-envelope"></i> Samuele.dimaria2005@gmail.com</a>
+        <a href="tel:+393393881640"><i class="fas fa-phone"></i> 339 388 1640</a>
+        <a href="https://wa.me/393393881640" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="preventivo-right">
+      <form action="https://formspree.io/f/Samuele.dimaria2005@gmail.com" method="POST" id="quiz-form">
+        <div class="field-group">
+          <label for="settore">Tipo di attività</label>
+          <select name="settore" id="settore" required>
+            <option value="" disabled selected>Seleziona il settore</option>
+            <option value="ristorazione">Ristorante / Trattoria</option>
+            <option value="balneare">Stabilimento Balneare</option>
+            <option value="artigiano">Artigiano (Idraulico, Elettricista…)</option>
+            <option value="beauty">Salone di Bellezza / Tatuatore</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>Obiettivo principale</label>
+          <div class="radio-grid">
+            <label class="radio-opt">
+              <input type="radio" name="obiettivo" value="nuovo-sito" required>
+              <span>Creare da zero</span>
+            </label>
+            <label class="radio-opt">
+              <input type="radio" name="obiettivo" value="restyling">
+              <span>Rifacimento</span>
+            </label>
+            <label class="radio-opt">
+              <input type="radio" name="obiettivo" value="clienti">
+              <span>Trovare clienti</span>
+            </label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="messaggio">Descrizione breve</label>
+          <textarea name="messaggio" id="messaggio" placeholder="Es: Vorrei un sito per i miei bagni a Genova con galleria foto e contatti…" rows="3"></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Il tuo nome" required>
+          </div>
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="La tua email" required>
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="telefono">WhatsApp <span class="opt">(opzionale)</span></label>
+          <input type="tel" name="telefono" id="telefono" placeholder="+39 …">
+        </div>
+        <button type="submit" class="btn-submit">Invia richiesta <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">S<span>D</span>M</div>
+      <p>Web Designer Freelance<br>Genova &amp; Liguria</p>
+    </div>
+    <div class="footer-links">
+      <a href="#servizi">Servizi</a>
+      <a href="#portfolio">Lavori</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#preventivo">Preventivo</a>
+    </div>
+    <div class="footer-contacts">
+      <a href="mailto:Samuele.dimaria2005@gmail.com"><i class="fas fa-envelope"></i> Samuele.dimaria2005@gmail.com</a>
+      <a href="tel:+393393881640"><i class="fas fa-phone"></i> 339 388 1640</a>
+      <a href="https://wa.me/393393881640" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Samuele Di Maria — Tutti i diritti riservati.</p>
+    <p class="seo-hidden">Realizzazione siti web professionali a Genova, Chiavari, Savona e La Spezia. Specialista in SEO locale per ristorazione, stabilimenti balneari e servizi di pronto intervento in Liguria.</p>
+  </div>
+</footer>
+
+<!-- WA Float -->
+<a href="https://wa.me/393393881640" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
