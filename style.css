@@ -436,4 +436,143 @@ footer { background: #f0ede8; border-top: 1px solid var(--border); padding: 60px
 
 @media (prefers-reduced-motion: reduce) {
   *, .reveal { animation: none !important; transition: none !important; }
+}/* Struttura della Sezione Portfolio */
+.portfolio-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b89c8a; /* Tonalità nocciola desaturata come da screen */
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+/* Griglia dei Progetti */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Colonne precise */
+    gap: 24px;
+}
+
+/* responsive per tablet e mobile */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 576px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card Progetto Linkabile */
+.project-card {
+    background-color: #f8f6f3; /* Sfondo tenue e caldo delle card */
+    border-radius: 12px;
+    padding: 32px;
+    text-decoration: none; /* Rimuove sottolineatura del link */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/* Tag Categorie */
+.project-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Colori personalizzati per i badge dei tag */
+.tag-salute { background-color: #e3ece9; color: #5a7a71; }      /* Nuovo: Verde Salvia Opaco */
+.tag-ristorazione { background-color: #f7eae4; color: #b06a4f; } /* Rosa Antico/Arancio */
+.tag-turismo { background-color: #f7eee4; color: #b08d4f; }      /* ocra tenue */
+.tag-artigiano { background-color: #ebdbe2; color: #8c5870; }    /* melanzana desaturato */
+.tag-beauty { background-color: #ebdbe2; color: #8c5870; }       /* viola prugna morbido */
+
+.external-icon {
+    color: #999999;
+    transition: color 0.2s;
+}
+
+.project-card:hover .external-icon {
+    color: #111111;
+}
+
+.project-icon {
+    color: #b89c8a; /* Colore delle icone coordinato */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.project-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111111;
+    margin: 0 0 10px 0;
+}
+
+.project-desc {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}/* Ottimizzazione per allineare perfettamente i tre blocchi dei servizi */
+.servizi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Modifica il valore in base allo spazio che hai impostato nel tuo layout */
+}
+
+.servizio-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Responsive per tablet e smartphone */
+@media (max-width: 992px) {
+    .servizi-grid {
+        grid-template-columns: 1fr;
+    }
 }
