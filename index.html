@@ -3,377 +3,382 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'Essenza del Mare — Ristorante · Cogoleto</title>
-<meta name="description" content="Cucina ligure d'autore a Cogoleto. Pesce fresco, tradizione e innovazione. Prenota il tuo tavolo.">
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<title>Samuele Di Maria — Web Designer Genova & Liguria</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- LOADER -->
-<div id="loader"><p class="loader-text">L'Essenza del Mare</p></div>
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-bar"></div>
+</div>
 
-<!-- NAV -->
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Nav -->
 <nav id="nav">
-  <a class="logo" href="#">L'Essenza <em>del Mare</em></a>
+  <a class="logo" href="#">S<span>D</span>M</a>
   <ul class="nav-links">
-    <li><a href="#storia">La storia</a></li>
-    <li><a href="#menu">Il menù</a></li>
-    <li><a href="#cantina">Cantina</a></li>
-    <li><a href="#prenota">Prenota</a></li>
+    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#portfolio">Lavori</a></li>
+    <li><a href="#preventivo" class="nav-cta">Preventivo Gratis</a></li>
   </ul>
-  <a href="#prenota" class="nav-res">Riserva un tavolo</a>
-  <button class="hamburger" id="hamburger"><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
 </nav>
 
+<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobile-menu">
-  <button class="mob-close" id="mob-close"><i class="fas fa-times"></i></button>
   <ul>
-    <li><a href="#storia">La storia</a></li>
-    <li><a href="#menu">Il menù</a></li>
-    <li><a href="#cantina">Cantina</a></li>
-    <li><a href="#prenota">Prenota</a></li>
+    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#portfolio">Lavori</a></li>
+    <li><a href="#recensioni">Recensioni</a></li>
+    <li><a href="#preventivo">Preventivo</a></li>
+    <li><a href="https://wa.me/393393881640" class="mobile-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
   </ul>
 </div>
 
-<!-- HERO — Fotografico verticale split -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
-    <div class="hero-left-content">
-      <p class="hero-place"><i class="fas fa-map-marker-alt"></i> Cogoleto, Riviera Ligure</p>
-      <h1>L'Essenza<br><em>del Mare.</em></h1>
-      <p class="hero-desc">Un viaggio culinario tra tradizione ligure e innovazione minimalista. Pesce fresco del golfo, erbe aromatiche della Riviera, vini selezionati.</p>
-      <div class="hero-actions">
-        <a href="#prenota" class="btn-gold">Prenota un tavolo</a>
-        <a href="#menu" class="btn-text-light">Sfoglia il menù <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="hero-orari">
-        <div class="ho-item"><span class="ho-label">Pranzo</span><span>12:30 – 14:30</span></div>
-        <div class="ho-sep"></div>
-        <div class="ho-item"><span class="ho-label">Cena</span><span>19:30 – 22:30</span></div>
-        <div class="ho-sep"></div>
-        <div class="ho-item"><span class="ho-label">Chiuso</span><span>Martedì</span></div>
-      </div>
+  <div class="hero-bg-text" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="dot"></span> Disponibile per nuovi progetti
+    </div>
+    <h1 class="hero-title">
+      Siti web che<br><em>lavorano per te</em><br>anche di notte.
+    </h1>
+    <p class="hero-sub">Web designer freelance a Genova. Creo siti funzionali su misura per aiutarti a trovare clienti e gestire il tuo lavoro, guarda i miei progetti e contattatami per creare il tuo sito web. Risposta 7/7 h24.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/393393881640?text=Ciao%20Samuele,%20ho%20visto%20il%20tuo%20sito%20e%20vorrei%20un%20preventivo." class="btn-primary" target="_blank">
+        <i class="fab fa-whatsapp"></i> Scrivimi su WhatsApp
+      </a>
+      <a href="#portfolio" class="btn-ghost">Vedi i lavori di prova <i class="fas fa-arrow-down"></i></a>
     </div>
   </div>
-  <div class="hero-right">
-    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Piatto di pesce" loading="eager">
-    <div class="hero-right-overlay"></div>
-    <div class="hero-badge-top"><span>Dal 2026</span></div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
   </div>
 </section>
 
-<!-- INTRO STRIP -->
-<div class="intro-strip">
-  <span><i class="fas fa-fish"></i> Pescato del giorno</span>
-  <span class="is-sep">·</span>
-  <span><i class="fas fa-leaf"></i> Ingredienti locali</span>
-  <span class="is-sep">·</span>
-  <span><i class="fas fa-wine-glass"></i> Cantina selezionata</span>
-  <span class="is-sep">·</span>
-  <span><i class="fas fa-star"></i> Vista sul golfo</span>
-  <span class="is-sep">·</span>
-  <span><i class="fas fa-award"></i> Cucina d'autore</span>
-</div>
-
-<!-- STORIA -->
-<section id="storia" class="storia">
-  <div class="storia-inner">
-    <div class="storia-imgs reveal">
-      <img class="si-big" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80" alt="Sala del ristorante" loading="lazy">
-      <img class="si-sm" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80" alt="Dettaglio piatto" loading="lazy">
+<!-- NUMERI -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num">6+</span>
+      <span class="stat-label">Siti realizzati nel 2026</span>
     </div>
-    <div class="storia-text reveal">
-      <p class="eyebrow">La nostra storia</p>
-      <h2>Tradizione ligure,<br><em>anima contemporanea.</em></h2>
-      <p>Siamo nati dalla passione per il mare e per la cucina autentica della Riviera. Ogni piatto che usciamo è il risultato di una ricerca continua: ingredienti locali, tecniche precise, rispetto per la stagionalità.</p>
-      <p>La nostra cucina parte dalla tradizione ligure — trofie, pesto, pesce di scoglio — e la reinterpreta con uno sguardo contemporaneo, senza mai perdere di vista l'essenziale: il sapore vero.</p>
-      <blockquote>"Il mare ci dà il prodotto. Noi lo rispettiamo."</blockquote>
-      <div class="storia-details">
-        <div class="sd"><strong>Coperti</strong><span>40 interni · 20 terrazza</span></div>
-        <div class="sd"><strong>Specialità</strong><span>Pesce fresco, cucina ligure</span></div>
-        <div class="sd"><strong>Prenotazioni</strong><span>Consigliate sempre</span></div>
-      </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">24h</span>
+      <span class="stat-label">Risposta garantita</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Clienti soddisfatti</span>
     </div>
   </div>
 </section>
 
-<!-- MENÙ -->
-<section id="menu" class="menu-section">
-  <div class="menu-header reveal">
-    <p class="eyebrow-center">Il menù</p>
-    <h2>Una selezione<br><em>che cambia col mare.</em></h2>
-    <p class="menu-note">Il menu varia secondo il pescato del giorno. I prezzi includono coperto e pane fatto in casa.</p>
+<!-- SERVIZI -->
+<section id="servizi" class="servizi">
+  <div class="section-header">
+    <p class="section-eyebrow">Cosa faccio</p>
+    <h2>Soluzioni su misura<br>per ogni attività.</h2>
   </div>
+  <section id="servizi" class="servizi">
+    <div class="section-header">
+        <p class="section-eyebrow">Cosa faccio</p>
+        <h2>Soluzioni su misura<br>per ogni attività.</h2>
+    </div>
+    <div class="servizi-grid">
+        <!-- 01. FOOD & TURISMO -->
+        <div class="servizio-card">
+            <div class="servizio-num">01</div>
+            <div class="servizio-icon"><i class="fas fa-utensils"></i></div>
+            <h3>Hospitality & Food</h3>
+            <p>Presenza online per ristoranti, stabilimenti balneari e attività turistiche. Menù digitali eleganti e sistemi per convertire i clienti direttamente dalla spiaggia o dal tavolo.</p>
+        </div>
 
-  <div class="menu-body">
-    <!-- ANTIPASTI -->
-    <div class="menu-chapter reveal">
-      <div class="mc-label"><span>Antipasti</span></div>
-      <div class="mc-dishes">
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Brandacujun di Stoccafisso</h4>
-            <p>Stoccafisso mantecato con patate, olio EVO e prezzemolo, servito su crostini di focaccia.</p>
-          </div>
-          <span class="dish-price">€ 16</span>
+        <!-- 02. SALUTE & BENESSERE -->
+        <div class="servizio-card">
+            <div class="servizio-num">02</div>
+            <div class="servizio-icon"><i class="fas fa-heartbeat"></i></div>
+            <h3>Salute & Benessere</h3>
+            <p>Siti web professionali per psicologi, fisioterapisti e studi medici. Layout mirati a trasmettere fiducia, autorevolezza e ottimizzati per la prenotazione rapida delle visite.</p>
         </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Acciughe di Monterosso Marinate</h4>
-            <p>Acciughe del Golfo marinate in limone e aglio, con capperi di Pantelleria e olio di Taggiasca.</p>
-          </div>
-          <span class="dish-price">€ 14</span>
+
+        <!-- 03. PRONTO INTERVENTO -->
+        <div class="servizio-card">
+            <div class="servizio-num">03</div>
+            <div class="servizio-icon"><i class="fas fa-tools"></i></div>
+            <h3>Pronto Intervento</h3>
+            <p>Siti ottimizzati per elettricisti e idraulici. Più chiamate, meno concorrenza. Struttura studiata per massimizzare i contatti diretti d'urgenza e i risultati in poche settimane.</p>
         </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Tartare di Gambero Viola</h4>
-            <p>Gambero viola di San Remo in tartare con emulsione di corallo, maionese di 'nduja e lime.</p>
-          </div>
-          <span class="dish-price">€ 22</span>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="lavori" class="portfolio-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">PORTFOLIO 2026</span>
+            <h2 class="section-title">Idee di lavori per la tua attività.</h2>
         </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Focaccina Gourmet al Formaggio e Tartufo</h4>
-            <p>Focaccia di Recco con crescenza fresca, lamelle di tartufo nero estivo e miele di millefiori.</p>
-          </div>
-          <span class="dish-price">€ 15</span>
+
+        <div class="projects-grid">
+            <a href="https://samueledimaria2005.github.io/sitopsicologo/" target="_blank" class="project-card">
+                <div class="card-header">
+                    <span class="project-tag tag-salute">Salute</span>
+                    <span class="external-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+                </div>
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v12"/><path d="M8 10h8"/></svg>
+                </div>
+                <h3 class="project-name">Studio Psicologo</h3>
+                <p class="project-desc">Interfaccia serena e professionale studiata per la fiducia e la prenotazione delle sedute online.</p>
+            </a>
+
+            <a href="https://samueledimaria2005.github.io/sitofisioterapista/" target="_blank" class="project-card">
+                <div class="card-header">
+                    <span class="project-tag tag-salute">Salute</span>
+                    <span class="external-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+                </div>
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </div>
+                <h3 class="project-name">Studio Fisioterapista</h3>
+                <p class="project-desc">Layout dinamico focalizzato sulla riabilitazione, con percorsi di trattamento chiari e intuitivi.</p>
+            </a>
+
+            <a href="https://samueledimaria2005.github.io/sito.idraulico.prova2026/" target="_blank" class="project-card">
+                <div class="card-header">
+                    <span class="project-tag tag-artigiano">Artigiano</span>
+                    <span class="external-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+                </div>
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16a4 4 0 0 1 4-4h6a2 2 0 0 0 2-2V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H9a4 4 0 0 0-4 4v4"/><path d="M5 20h14a1 1 0 0 1 1 1v1H4v-1a1 1 0 0 1 1-1Z"/></svg>
+                </div>
+                <h3 class="project-name">Servizi Idraulici</h3>
+                <p class="project-desc">Ottimizzato per conversioni rapide, chiamate dirette di emergenza e preventivi chiari.</p>
+            </a>
+
+            <a href="https://samueledimaria2005.github.io/sitoelettricista2026prova/" target="_blank" class="project-card">
+                <div class="card-header">
+                    <span class="project-tag tag-artigiano">Artigiano</span>
+                    <span class="external-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+                </div>
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <h3 class="project-name">Pronto Intervento Elettrico</h3>
+                <p class="project-desc">Affidabilità, architettura pulita e massima chiarezza per servizi tecnici e d'urgenza sul territorio.</p>
+            </a>
+
+            <a href="https://samueledimaria2005.github.io/provaristorante2026/" target="_blank" class="project-card">
+                <div class="card-header">
+                    <span class="project-tag tag-ristorazione">Ristorazione</span>
+                    <span class="external-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+                </div>
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V13m0 0a5 5 0 0 0 5-5V4H7v4a5 5 0 0 0 5 5ZM9 22h6"/></svg>
+                </div>
+                <h3 class="project-name">Ristorante Moderno</h3>
+                <p class="project-desc">Design minimale, menù digitali fluidi ed esperienza immersiva per l'alta cucina genovese.</p>
+            </a>
+
+            <a href="https://samueledimaria2005.github.io/bagni-genova-2026/" target="_blank" class="project-card">
+                <div class="card-header">
+                    <span class="project-tag tag-turismo">Turismo</span>
+                    <span class="external-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+                </div>
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+                </div>
+                <h3 class="project-name">Stabilimento balneare</h3>
+                <p class="project-desc">Interfaccia fresca e ottimizzata per la gestione e prenotazione di stabilimenti balneari della Riviera.</p>
+            </a>
+            
+            <a href="https://samueledimaria2005.github.io/salone-genova-prova2026/" target="_blank" class="project-card">
+                <div class="card-header">
+                    <span class="project-tag tag-beauty">Beauty</span>
+                    <span class="external-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+                </div>
+                <div class="project-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="9.8" y1="8.5" x2="21" y2="19"/><line x1="21" y1="5" x2="9.8" y2="15.5"/></svg>
+                </div>
+                <h3 class="project-name">Hair Salon</h3>
+                <p class="project-desc">Eleganza visiva, branding moderno e sistema di prenotazioni online integrato per il settore beauty.</p>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- PERCHÉ SCEGLIERMI -->
+<section class="perche">
+  <div class="perche-inner">
+    <div class="perche-left">
+      <p class="section-eyebrow">Perché scegliermi</p>
+      <h2>Un freelancer,<br>nessun intermediario.</h2>
+      <p class="perche-body">Parli direttamente con chi costruisce il tuo sito. Niente agenzie, niente costi gonfiati. Solo risultati concreti per la tua attività a Genova e in Liguria.</p>
+      <a href="https://wa.me/393393881640" class="btn-primary" target="_blank">
+        <i class="fab fa-whatsapp"></i> Parliamone
+      </a>
+    </div>
+    <div class="perche-right">
+      <div class="perche-item">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <strong>Consegna in 7–14 giorni</strong>
+          <p>Tempi certi, nessun ritardo. Il tuo sito online nel minor tempo possibile.</p>
         </div>
       </div>
-    </div>
-
-    <!-- PRIMI -->
-    <div class="menu-chapter reveal">
-      <div class="mc-label"><span>Primi Piatti</span></div>
-      <div class="mc-dishes">
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Trofie al Pesto di Pra'</h4>
-            <p>Trofie artigianali con pesto genovese DOP preparato al mortaio, fagiolini e patata ligure.</p>
-          </div>
-          <span class="dish-price">€ 15</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Pansoti in Salsa di Noci Antica Ricetta</h4>
-            <p>Pansoti ripieni di preboggion con salsa di noci tradizionale e maggiorana fresca.</p>
-          </div>
-          <span class="dish-price">€ 16</span>
-        </div>
-        <div class="dish highlight-dish">
-          <div class="dish-main">
-            <h4>Tagliolini all'Astice e Lime <span class="dish-tag">Chef</span></h4>
-            <p>Tagliolini all'uovo con bisque di astice, zeste di lime e bottarga di muggine grattugiata.</p>
-          </div>
-          <span class="dish-price">€ 24</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Risotto ai Frutti di Scoglio</h4>
-            <p>Riso Vialone Nano mantecato con cozze, vongole, gamberi e cappesante del Golfo.</p>
-          </div>
-          <span class="dish-price">€ 20</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Ravioli di Pesce al Sugo di Mare</h4>
-            <p>Ravioli ripieni di branzino e ricotta con sugo leggero di pomodoro piccadilly e basilico fresco.</p>
-          </div>
-          <span class="dish-price">€ 18</span>
+      <div class="perche-item">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <strong>Ottimizzato per Google</strong>
+          <p>SEO locale integrato per farti trovare dai clienti della tua zona.</p>
         </div>
       </div>
-    </div>
-
-    <!-- SECONDI -->
-    <div class="menu-chapter reveal">
-      <div class="mc-label"><span>Secondi Piatti</span></div>
-      <div class="mc-dishes">
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Frittura Scelta del Golfo</h4>
-            <p>Frittura mista di paranza: moscardini, calamari, gamberi e acciughe. Servita con maionese al limone.</p>
-          </div>
-          <span class="dish-price">€ 22</span>
-        </div>
-        <div class="dish highlight-dish">
-          <div class="dish-main">
-            <h4>Pescato del Giorno all'Isolana <span class="dish-tag">Stagionale</span></h4>
-            <p>Il pescato del giorno preparato secondo la tradizione isolana con olive taggiasche, capperi e pomodorini.</p>
-          </div>
-          <span class="dish-price">€ 26</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Calamari alla Griglia con Verdure Crop</h4>
-            <p>Calamari interi grigliati con verdure di stagione grigliate, prezzemolo e olio extravergine di Taggiasca.</p>
-          </div>
-          <span class="dish-price">€ 19</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Polpo Croccante su Crema di Patate</h4>
-            <p>Polpo verace cotto a bassa temperatura, croccantizzato, su crema di patate liguri e paprika affumicata.</p>
-          </div>
-          <span class="dish-price">€ 21</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main">
-            <h4>Filetto di Orata in Crosta di Zucchine</h4>
-            <p>Filetto di orata del Golfo in crosta di zucchine liguri e pinoli tostati, salsa di pomodoro profumata al timo.</p>
-          </div>
-          <span class="dish-price">€ 23</span>
+      <div class="perche-item">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <strong>Design su misura</strong>
+          <p>Ogni sito è unico. Niente template, tutto costruito attorno alla tua attività.</p>
         </div>
       </div>
-    </div>
-
-    <!-- DOLCI -->
-    <div class="menu-chapter reveal">
-      <div class="mc-label"><span>Dolci</span></div>
-      <div class="mc-dishes dolci-grid">
-        <div class="dish">
-          <div class="dish-main"><h4>Tiramisù al Pistacchio</h4><p>Rivisitazione con crema al pistacchio di Bronte e savoiardi al caffè arabica.</p></div>
-          <span class="dish-price">€ 8</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main"><h4>Semifreddo al Chinotto di Savona</h4><p>Semifreddo artigianale con gelatina al chinotto e granella di mandorle tostate.</p></div>
-          <span class="dish-price">€ 7</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main"><h4>Panna Cotta ai Frutti di Bosco</h4><p>Panna cotta alla vaniglia bourbon con coulis di frutti di bosco freschi.</p></div>
-          <span class="dish-price">€ 7</span>
-        </div>
-        <div class="dish">
-          <div class="dish-main"><h4>Pandolce Ligure Rivisitato</h4><p>Pandolce tradizionale servito tiepido con gelato fior di latte e confettura di fichi.</p></div>
-          <span class="dish-price">€ 9</span>
+      <div class="perche-item">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <strong>Supporto anche dopo</strong>
+          <p>Non sparisco dopo la consegna. Sono disponibile per aggiornamenti e modifiche 24/7 grazie al servizio di manutenzione.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CANTINA -->
-<section id="cantina" class="cantina">
-  <div class="cantina-inner">
-    <div class="cantina-img reveal">
-      <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=80" alt="Cantina vini" loading="lazy">
-    </div>
-    <div class="cantina-text reveal">
-      <p class="eyebrow">La nostra cantina</p>
-      <h2>Vini della Liguria<br><em>e non solo.</em></h2>
-      <p>Una selezione curata di etichette liguri — Vermentino, Pigato, Rossese — abbinate a grandi bianchi italiani e internazionali per accompagnare al meglio i sapori del mare.</p>
-      <div class="vini-list">
-        <div class="vino-item">
-          <div class="vi-info"><strong>Vermentino Colli di Luni</strong><span>Bianco · Liguria</span></div>
-          <span class="vi-price">€ 7 / calice</span>
-        </div>
-        <div class="vino-item">
-          <div class="vi-info"><strong>Pigato della Riviera Ligure</strong><span>Bianco · Rivera di Ponente DOC</span></div>
-          <span class="vi-price">€ 28 / bottiglia</span>
-        </div>
-        <div class="vino-item">
-          <div class="vi-info"><strong>Rossese di Dolceacqua</strong><span>Rosso · Liguria DOC</span></div>
-          <span class="vi-price">€ 32 / bottiglia</span>
-        </div>
-        <div class="vino-item">
-          <div class="vi-info"><strong>Acqua Panna / S.Pellegrino 75cl</strong><span>Naturale o frizzante</span></div>
-          <span class="vi-price">€ 4</span>
-        </div>
+<!-- PREVENTIVO FORM -->
+<section id="preventivo" class="preventivo">
+  <div class="preventivo-inner">
+    <div class="preventivo-left">
+      <p class="section-eyebrow">Preventivo gratuito</p>
+      <h2>Parlami del<br>tuo progetto.</h2>
+      <p>Rispondi a poche domande e ricevi un preventivo personalizzato entro 24 ore. Gratis, senza impegno.</p>
+      <div class="contact-direct">
+        <a href="mailto:samuele.dimaria2005@gmail.com"><i class="fas fa-envelope"></i> Samuele.dimaria2005@gmail.com</a>
+        <a href="tel:+393393881640"><i class="fas fa-phone"></i> 339 388 1640</a>
+        <a href="https://wa.me/393393881640" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
-      <p class="cantina-note"><i class="fas fa-info-circle"></i> La carta dei vini completa è disponibile al tavolo. Chiedi al sommelier per abbinamenti personalizzati.</p>
     </div>
-  </div>
-</section>
+    <div class="preventivo-right">
+      <form action="https://formspree.io/f/Samuele.dimaria2005@gmail.com" method="POST" id="quiz-form">
+        <div class="field-group">
+          <label for="settore">Tipo di attività</label>
+          <select name="settore" id="settore" required>
+            <option value="" disabled selected>Seleziona il settore</option>
+            <option value="ristorazione">Ristorazione</option>
+            <option value="beauty">Negozio, Store Online</option>
+            <option value="balneare">Turismo</option>
+            <option value="artigiano">Artigiano (Idraulico, Elettricista…)</option>
+            <option value="beauty">Salone di Bellezza / Tatuatore / Estetista / ecc...</option>
+            <option value="beauty">Studio (Psicologo, Fisioterapista…) </option>
 
-<!-- PRENOTA -->
-<section id="prenota" class="prenota">
-  <div class="prenota-bg">
-    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80" alt="Tavolo ristorante" loading="lazy">
-    <div class="prenota-overlay"></div>
-  </div>
-  <div class="prenota-inner">
-    <div class="prenota-text reveal">
-      <p class="eyebrow-light">Riserva</p>
-      <h2>Prenota il<br>tuo tavolo.</h2>
-      <p>Le prenotazioni sono consigliate, specialmente nel weekend e in estate. Contattaci via WhatsApp o per telefono per garantirti il tuo posto.</p>
-      <div class="prenota-contacts">
-        <a href="tel:+393383371539" class="pc-btn"><i class="fas fa-phone"></i><div><strong>338 337 1539</strong><span>Lun–Dom (escluso martedì)</span></div></a>
-        <a href="https://wa.me/393383371539?text=Vorrei%20prenotare%20un%20tavolo" class="pc-btn wa" target="_blank"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp</strong><span>Risposta immediata</span></div></a>
-      </div>
-      <div class="prenota-addr"><i class="fas fa-map-marker-alt"></i> Via Aurelia di Levante, 16016 Cogoleto (GE)</div>
-    </div>
-    <div class="prenota-form reveal">
-      <form id="res-form">
-        <h3>Richiesta di prenotazione</h3>
-        <div class="pf-row">
-          <div class="pf-field"><label>Nome e Cognome</label><input type="text" placeholder="Il tuo nome" required></div>
-          <div class="pf-field"><label>Telefono</label><input type="tel" placeholder="+39 …" required></div>
+            <option value="altro">Altro</option>
+          </select>
         </div>
-        <div class="pf-row">
-          <div class="pf-field"><label>Data</label><input type="date" required></div>
-          <div class="pf-field"><label>Orario</label>
-            <select required>
-              <option value="" disabled selected>Seleziona</option>
-              <optgroup label="Pranzo">
-                <option>12:30</option><option>13:00</option><option>13:30</option>
-              </optgroup>
-              <optgroup label="Cena">
-                <option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option>
-              </optgroup>
-            </select>
+        <div class="field-group">
+          <label>Obiettivo principale</label>
+          <div class="radio-grid">
+            <label class="radio-opt">
+              <input type="radio" name="obiettivo" value="nuovo-sito" required>
+              <span>Creare da zero</span>
+            </label>
+            <label class="radio-opt">
+              <input type="radio" name="obiettivo" value="restyling">
+              <span>Rifacimento</span>
+            </label>
+            <label class="radio-opt">
+              <input type="radio" name="obiettivo" value="clienti">
+              <span>Trovare clienti</span>
+            </label>
           </div>
         </div>
-        <div class="pf-row">
-          <div class="pf-field"><label>N° coperti</label>
-            <select required>
-              <option value="" disabled selected>Quante persone?</option>
-              <option>1 persona</option><option>2 persone</option><option>3 persone</option>
-              <option>4 persone</option><option>5 persone</option><option>6+ persone</option>
-            </select>
-          </div>
-          <div class="pf-field"><label>Email</label><input type="email" placeholder="La tua email"></div>
+        <div class="field-group">
+          <label for="messaggio">Descrizione breve</label>
+          <textarea name="messaggio" id="messaggio" placeholder="Es: Vorrei un sito per i miei bagni a Genova con galleria foto e contatti…" rows="3"></textarea>
         </div>
-        <div class="pf-field"><label>Note <span class="opt">(allergie, occasioni speciali…)</span></label><textarea rows="2" placeholder="Allergie, intolleranze, occasioni speciali…"></textarea></div>
-        <button type="submit" class="btn-submit-res">Conferma richiesta <i class="fas fa-arrow-right"></i></button>
+        <div class="field-row">
+          <div class="field-group">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Il tuo nome" required>
+          </div>
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="La tua email" required>
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="telefono">WhatsApp <span class="opt">(opzionale)</span></label>
+          <input type="tel" name="telefono" id="telefono" placeholder="+39 …">
+        </div>
+        <button type="submit" class="btn-submit">Invia richiesta <i class="fas fa-paper-plane"></i></button>
       </form>
     </div>
-  </div>
-  <!-- MAPPA -->
-  <div class="prenota-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.883348128459!2d8.647315512353153!3d44.39021237095627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d323f814cfb62f%3A0x551c9f6741347936!2sVia%20Aurelia%20di%20Levante%2C%2016016%20Cogoleto%20GE!5e0!3m2!1sit!2sit!4v1709630000000!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" title="Posizione ristorante"></iframe>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="foot-inner">
-    <div class="foot-brand">
-      <p class="foot-logo">L'Essenza <em>del Mare</em></p>
-      <p>Ristorante · Cogoleto (GE)</p>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo">S<span>D</span>M</div>
+      <p>Web Designer Freelance<br>Genova &amp; Liguria</p>
     </div>
-    <div class="foot-menu">
-      <a href="#storia">La storia</a>
-      <a href="#menu">Il menù</a>
-      <a href="#cantina">Cantina</a>
-      <a href="#prenota">Prenota</a>
+    <div class="footer-links">
+      <a href="#servizi">Servizi</a>
+      <a href="#portfolio">Lavori</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#preventivo">Preventivo</a>
     </div>
-    <div class="foot-contacts">
-      <a href="tel:+393383371539"><i class="fas fa-phone"></i> 338 337 1539</a>
-      <a href="mailto:info@essenzadelmare.it"><i class="fas fa-envelope"></i> info@essenzadelmare.it</a>
-      <p><i class="fas fa-map-marker-alt"></i> Via Aurelia di Levante, Cogoleto</p>
-      <div class="foot-soc">
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      </div>
+    <div class="footer-contacts">
+      <a href="mailto:Samuele.dimaria2005@gmail.com"><i class="fas fa-envelope"></i> Samuele.dimaria2005@gmail.com</a>
+      <a href="tel:+393393881640"><i class="fas fa-phone"></i> 339 388 1640</a>
+      <a href="https://wa.me/393393881640" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
   </div>
-  <div class="foot-bottom">
-    <p>&copy; 2026 L'Essenza del Mare — Tutti i diritti riservati</p>
-    <p>Sito realizzato da <a href="#">Samuele Di Maria</a></p>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Samuele Di Maria — Tutti i diritti riservati.</p>
+    <p class="seo-hidden">Realizzazione siti web professionali a Genova, Chiavari, Savona e La Spezia. Specialista in SEO locale per ristorazione, stabilimenti balneari e servizi di pronto intervento in Liguria.</p>
   </div>
 </footer>
 
-<a href="https://wa.me/393383371539?text=Vorrei%20prenotare%20un%20tavolo" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<!-- WA Float -->
+<a href="https://wa.me/393393881640" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 <script src="script.js"></script>
 </body>
